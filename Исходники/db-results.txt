@@ -1,0 +1,137 @@
+# x = Track.first
+
+tracks = Track.where(start_time: Time.new(2015,8,1)  .. Time.new(2016,1,1) )
+tracks.each_with_index do |x, num|
+    new_track = x.dup
+
+    new_track.track_locations << x.track_locations.map do |loc| 
+        new_loc = loc.dup
+        new_loc.time = loc.time.change(year: 2016)
+
+        new_loc
+    end
+    new_track.start_time = new_track.track_locations.first.time
+    new_track.stop_time = new_track.track_locations.last.time
+    new_track.save
+
+    puts "\n\n\nDONE #{num+1}/#{tracks.count} (#{((num+1)/tracks.count)*100}\%)\n\n\n"
+end
+
+
+///Общая инфа
+
+
+//2015
+         Table         |  Size   | External Size 
+-----------------------+---------+---------------
+ locations             | 16 MB   | 3800 kB
+ logged_exceptions     | 1272 kB | 1024 kB
+ tracks                | 64 kB   | 48 kB
+ active_admin_comments | 40 kB   | 40 kB
+ simple_captcha_data   | 144 kB  | 112 kB
+ cars                  | 64 kB   | 56 kB
+ users                 | 64 kB   | 56 kB
+ profiles              | 48 kB   | 40 kB
+ reset_passwords       | 24 kB   | 24 kB
+ api_tokens            | 48 kB   | 40 kB
+ users_mails           | 32 kB   | 24 kB
+ images                | 32 kB   | 24 kB
+ schema_migrations     | 32 kB   | 24 kB
+ verification_users    | 32 kB   | 24 kB
+
+//2017-1
+
+
+        Таблица        | Общий размер | Индексы, VM, FSM 
+-----------------------+--------------+---------------
+ locations             | 46 MB        | 12 MB
+ logged_exceptions     | 2528 kB      | 2280 kB
+ tracks                | 96 kB        | 56 kB
+ active_admin_comments | 80 kB        | 72 kB
+ simple_captcha_data   | 72 kB        | 56 kB
+ cars                  | 64 kB        | 56 kB
+ users                 | 64 kB        | 56 kB
+ profiles              | 48 kB        | 40 kB
+ reset_passwords       | 48 kB        | 40 kB
+ api_tokens            | 48 kB        | 40 kB
+ users_mails           | 32 kB        | 24 kB
+ images                | 32 kB        | 24 kB
+ schema_migrations     | 32 kB        | 24 kB
+ verification_users    | 32 kB        | 24 kB
+(14 строк)
+
+/*2*/
+
+                      Параметр                       | В байтах |  В удобночитаемом виде  | Байт на строку 
+-----------------------------------------------------+----------+-------------------------+----------------
+ Размер данных                                       | 35790848 | 34 MB                   |            305
+ Карта видимости                                     |        0 | 0 bytes                 |              0
+ Свободное пространство                              |    32768 | 32 kB                   |              0
+ Общий размер, включая TOAST                         | 35831808 | 34 MB                   |            306
+ Размер индексов                                     | 12222464 | 12 MB                   |            104
+ Общий размер, включая TOAST и индексы               | 48054272 | 46 MB                   |            410
+ Кол-во используемых строк в текстовом представлении | 35190836 | 34 MB                   |            300
+ ----------                                          |          | ----                    |               
+ Число строк                                         |   117048 |                         |               
+ Число действующих кортежей                          |   117048 |                         |               
+ Число недействующих кортежей                        |     1245 |                         |               
+(11 строк)
+
+
+/* 3 */
+
+       relname       | too_much_seq |      case      | rel_size | seq_scan | idx_scan 
+---------------------+--------------+----------------+----------+----------+----------
+ logged_exceptions   |          456 | Missing Index? |   253952 |      470 |       14
+ simple_captcha_data |       -11238 | OK             |    49152 |      971 |    12209
+ tracks              |       -59744 | OK             |    40960 |    19421 |    79165
+ locations           |      -129803 | OK             | 35790848 |      734 |   130537
+
+/* 3.5 */ 
+            Индекс            | Число кортежей | Размер таблицы | Размер индекса | Уникальность | Число использований | Прочитано, с помощью индекса | Выбрано, с помощью индекса 
+------------------------------+----------------+----------------+----------------+--------------+---------------------+------------------------------+----------------------------
+ track_id_lat_long_time_index |         117048 | 34 MB          | 8920 kB        | Y            |                1560 |                       404460 |                     376250
+ locations_pkey               |         117048 | 34 MB          | 4088 kB        | Y            |                   0 |                            0 |                          0
+ locations_time_idx           |         117048 | 34 MB          | 2592 kB        | N            |                   0 |                            0 |                          0
+(3 строки)
+
+ /* 5 */
+  HashAggregate  (cost=7774.21..7778.75 rows=454 width=12) (actual time=454.555..454.676 rows=403 loops=1)
+   ->  Hash Join  (cost=15.91..7253.63 rows=104116 width=12) (actual time=1.385..370.820 rows=102941 loops=1)
+         Hash Cond: (locations.track_id = tracks.id)
+         ->  Seq Scan on locations  (cost=0.00..5792.15 rows=117292 width=12) (actual time=0.397..225.732 rows=117046 loops=1)
+               Filter: ((state)::text = 'TrackLocation'::text)
+               Rows Removed by Filter: 2
+         ->  Hash  (cost=10.88..10.88 rows=403 width=4) (actual time=0.953..0.953 rows=403 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 32kB
+               ->  Seq Scan on tracks  (cost=0.00..10.88 rows=403 width=4) (actual time=0.048..0.563 rows=403 loops=1)
+                     Filter: (car_id = 1)
+                     Rows Removed by Filter: 67
+ Total runtime: 454.983 ms
+
+/* 6 - 2 */
+                     'Параметр'                      | В байтах | В удобночитаемом виде | Байт на строку 
+-----------------------------------------------------+----------+-----------------------+----------------
+ Общий размер отношения                              | 34594816 | 33 MB                 |            295
+ Карта видимости                                     |        0 | 0 bytes               |              0
+ Размер свобоного пространства                       |        0 | 0 bytes               |              0
+ Размер таблицы, включая TOAST                       | 34603008 | 33 MB                 |            295
+ Размер индексов                                     | 11182080 | 11 MB                 |             95
+ Общий размер, включая TOAST и индексы               | 45785088 | 44 MB                 |            390
+ Кол-во используемых строк в текстовом представлении | 33598218 | 32 MB                 |            286
+ Число строк                                         |   117202 |                       |               
+ Число действующих кортежей                          |   117202 |                       |               
+ Число недействующих кортежей                        |        0 | 
+
+ /* 7 */
+
+  HashAggregate  (cost=7375.99..7380.57 rows=458 width=12) (actual time=198.302..198.430 rows=406 loops=1)
+   ->  Hash Join  (cost=15.99..6856.52 rows=103895 width=12) (actual time=0.582..158.951 rows=103097 loops=1)
+         Hash Cond: (locations.track_id = tracks.id)
+         ->  Seq Scan on locations  (cost=0.00..5395.02 rows=117202 width=12) (actual time=0.026..96.341 rows=117202 loops=1)
+         ->  Hash  (cost=10.91..10.91 rows=406 width=4) (actual time=0.497..0.497 rows=406 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 32kB
+               ->  Seq Scan on tracks  (cost=0.00..10.91 rows=406 width=4) (actual time=0.029..0.244 rows=406 loops=1)
+                     Filter: (car_id = 1)
+                     Rows Removed by Filter: 67
+ Total runtime: 198.651 ms
