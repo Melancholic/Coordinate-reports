@@ -1,0 +1,256 @@
+Request summary
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Processed File:      /var/log/httpd/coordinate/production.log         
+Parsed lines:        7898                                             
+Skipped lines:       169                                              
+Parsed requests:     1842                                             
+Skipped requests:    0                                                
+Warnings:            teaser_check_failed: 292, no_current_request: 169
+
+First request:       2017-04-02 12:50:12
+Last request:        2017-04-10 02:57:02
+Total time analyzed: 8 days             
+
+Request distribution per hour
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  0:00 ┃ 28 hits/day ┃ ░░░░░░░░░░░░░░░░░░░
+  1:00 ┃  4 hits/day ┃ ░░
+  2:00 ┃ 16 hits/day ┃ ░░░░░░░░░░░
+  3:00 ┃  1 hits/day ┃ 
+  4:00 ┃  1 hits/day ┃ 
+  5:00 ┃ 18 hits/day ┃ ░░░░░░░░░░░░
+  6:00 ┃ 20 hits/day ┃ ░░░░░░░░░░░░░
+  7:00 ┃  6 hits/day ┃ ░░░░
+  8:00 ┃  4 hits/day ┃ ░░
+  9:00 ┃  1 hits/day ┃ 
+ 10:00 ┃  1 hits/day ┃ 
+ 11:00 ┃  2 hits/day ┃ ░
+ 12:00 ┃ 40 hits/day ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ 13:00 ┃ 75 hits/day ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ 14:00 ┃  2 hits/day ┃ ░
+ 15:00 ┃  2 hits/day ┃ ░
+ 16:00 ┃ 15 hits/day ┃ ░░░░░░░░░░
+ 17:00 ┃  9 hits/day ┃ ░░░░░░
+ 18:00 ┃  2 hits/day ┃ ░
+ 19:00 ┃  1 hits/day ┃ 
+ 20:00 ┃  1 hits/day ┃ 
+ 21:00 ┃  1 hits/day ┃ ░
+ 22:00 ┃  1 hits/day ┃ ░
+ 23:00 ┃  4 hits/day ┃ ░░
+
+Most requested
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Api::V1::GeodataController#recive.JSON ┃ 973 hits ┃ 52.8% ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+Api::V1::SessionsController#ping.JSON  ┃ 284 hits ┃ 15.4% ┃ ░░░░░░░░░░░░░░░░░░░░
+#.                                     ┃ 253 hits ┃ 13.7% ┃ ░░░░░░░░░░░░░░░░░░
+UsersController#charts_controller.JSON ┃  66 hits ┃  3.6% ┃ ░░░░░
+StaticPagesController#home.HTML        ┃  43 hits ┃  2.3% ┃ ░░░
+Maps::TracksController#info.JS         ┃  39 hits ┃  2.1% ┃ ░░░
+Maps::LocationsController#index.JSON   ┃  36 hits ┃  2.0% ┃ ░░░
+CarsController#info.JSON               ┃  32 hits ┃  1.7% ┃ ░░
+Maps::CarsController#index.JSON        ┃  24 hits ┃  1.3% ┃ ░░
+Maps::TracksController#index.JSON      ┃  24 hits ┃  1.3% ┃ ░░
+StaticPagesController#home.*/*         ┃  21 hits ┃  1.1% ┃ ░
+UsersController#show.HTML              ┃  17 hits ┃  0.9% ┃ ░
+Maps::LocationsController#show.JSON    ┃  10 hits ┃  0.5% ┃ ░
+StaticPagesController#about.*/*        ┃   6 hits ┃  0.3% ┃ 
+Admin::DashboardController#index.HTML  ┃   2 hits ┃  0.1% ┃ 
+SessionsController#create.HTML         ┃   2 hits ┃  0.1% ┃ 
+StaticPagesController#faq.*/*          ┃   2 hits ┃  0.1% ┃ 
+Admin::TicketsController#index.HTML    ┃   1 hits ┃  0.1% ┃ 
+Admin::UsersController#show.HTML       ┃   1 hits ┃  0.1% ┃ 
+SessionsController#new.HTML            ┃   1 hits ┃  0.1% ┃ 
+
+HTTP methods
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+POST ┃ 978 hits ┃ 53.1% ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+GET  ┃ 864 hits ┃ 46.9% ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+HTTP statuses returned
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+200 ┃ 1530 hits ┃ 99.5% ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+302 ┃    7 hits ┃  0.5% ┃ ░
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Request duration - by sum                                                                                                    ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Api::V1::GeodataController#recive.JSON                                                                                       ┃  959 ┃  3m42s ┃  231ms ┃  269ms ┃  111ms ┃  5.80s ┃ 132ms-564ms
+UsersController#charts_controller.JSON                                                                                       ┃   58 ┃  1m14s ┃  1.27s ┃  1.18s ┃   15ms ┃  5.20s ┃  26ms-4.74s
+Maps::TracksController#index.JSON                                                                                            ┃   22 ┃ 19.20s ┃  872ms ┃  453ms ┃  336ms ┃  2.04s ┃ 331ms-2.05s
+UsersController#show.HTML                                                                                                    ┃   16 ┃ 17.85s ┃  1.12s ┃  605ms ┃   55ms ┃  2.73s ┃  54ms-2.74s
+StaticPagesController#home.HTML                                                                                              ┃   41 ┃ 14.06s ┃  342ms ┃  410ms ┃   68ms ┃  2.35s ┃  77ms-2.37s
+CarsController#info.JSON                                                                                                     ┃   11 ┃ 13.55s ┃  1.23s ┃  838ms ┃  228ms ┃  2.34s ┃ 225ms-2.37s
+Maps::TracksController#info.JS                                                                                               ┃   37 ┃  9.92s ┃  267ms ┃  135ms ┃   42ms ┃  612ms ┃  55ms-612ms
+Maps::LocationsController#index.JSON                                                                                         ┃   22 ┃  7.81s ┃  354ms ┃  337ms ┃   43ms ┃  1.29s ┃  42ms-1.31s
+StaticPagesController#home.*/*                                                                                               ┃   21 ┃  7.76s ┃  369ms ┃  241ms ┃  114ms ┃  907ms ┃ 112ms-916ms
+#.                                                                                                                           ┃   16 ┃  6.42s ┃  401ms ┃  334ms ┃   12ms ┃  1.05s ┃  11ms-1.06s
+Admin::DashboardController#index.HTML                                                                                        ┃    2 ┃  2.87s ┃  1.43s ┃  661ms ┃  967ms ┃  1.90s ┃ 961ms-1.92s
+Api::V1::SessionsController#ping.JSON                                                                                        ┃  282 ┃  2.61s ┃    9ms ┃   22ms ┃    1ms ┃  248ms ┃    1ms-30ms
+StaticPagesController#about.*/*                                                                                              ┃    6 ┃  1.84s ┃  307ms ┃   68ms ┃  196ms ┃  379ms ┃ 194ms-383ms
+Maps::CarsController#index.JSON                                                                                              ┃   22 ┃  1.22s ┃   55ms ┃   66ms ┃   12ms ┃  307ms ┃  11ms-311ms
+Maps::LocationsController#show.JSON                                                                                          ┃   10 ┃  620ms ┃   62ms ┃   60ms ┃   17ms ┃  216ms ┃  16ms-218ms
+StaticPagesController#faq.*/*                                                                                                ┃    2 ┃  577ms ┃  288ms ┃    9ms ┃  282ms ┃  295ms ┃ 277ms-296ms
+SessionsController#create.HTML                                                                                               ┃    2 ┃  453ms ┃  226ms ┃   79ms ┃  171ms ┃  283ms ┃ 168ms-287ms
+Admin::TicketsController#index.HTML                                                                                          ┃    1 ┃  445ms ┃  445ms ┃    0ms ┃  445ms ┃  445ms ┃ 443ms-458ms
+Admin::ExceptionsController#index.HTML                                                                                       ┃    1 ┃  433ms ┃  433ms ┃    0ms ┃  433ms ┃  433ms ┃ 429ms-443ms
+Admin::UsersController#show.HTML                                                                                             ┃    1 ┃  385ms ┃  385ms ┃    0ms ┃  385ms ┃  385ms ┃ 383ms-396ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Request duration - by mean                                                                                                   ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Admin::DashboardController#index.HTML                                                                                        ┃    2 ┃  2.87s ┃  1.43s ┃  661ms ┃  967ms ┃  1.90s ┃ 961ms-1.92s
+UsersController#charts_controller.JSON                                                                                       ┃   58 ┃  1m14s ┃  1.27s ┃  1.18s ┃   15ms ┃  5.20s ┃  26ms-4.74s
+CarsController#info.JSON                                                                                                     ┃   11 ┃ 13.55s ┃  1.23s ┃  838ms ┃  228ms ┃  2.34s ┃ 225ms-2.37s
+UsersController#show.HTML                                                                                                    ┃   16 ┃ 17.85s ┃  1.12s ┃  605ms ┃   55ms ┃  2.73s ┃  54ms-2.74s
+Maps::TracksController#index.JSON                                                                                            ┃   22 ┃ 19.20s ┃  872ms ┃  453ms ┃  336ms ┃  2.04s ┃ 331ms-2.05s
+Admin::TicketsController#index.HTML                                                                                          ┃    1 ┃  445ms ┃  445ms ┃    0ms ┃  445ms ┃  445ms ┃ 443ms-458ms
+Admin::ExceptionsController#index.HTML                                                                                       ┃    1 ┃  433ms ┃  433ms ┃    0ms ┃  433ms ┃  433ms ┃ 429ms-443ms
+#.                                                                                                                           ┃   16 ┃  6.42s ┃  401ms ┃  334ms ┃   12ms ┃  1.05s ┃  11ms-1.06s
+Admin::UsersController#show.HTML                                                                                             ┃    1 ┃  385ms ┃  385ms ┃    0ms ┃  385ms ┃  385ms ┃ 383ms-396ms
+StaticPagesController#home.*/*                                                                                               ┃   21 ┃  7.76s ┃  369ms ┃  241ms ┃  114ms ┃  907ms ┃ 112ms-916ms
+Maps::LocationsController#index.JSON                                                                                         ┃   22 ┃  7.81s ┃  354ms ┃  337ms ┃   43ms ┃  1.29s ┃  42ms-1.31s
+StaticPagesController#home.HTML                                                                                              ┃   41 ┃ 14.06s ┃  342ms ┃  410ms ┃   68ms ┃  2.35s ┃  77ms-2.37s
+StaticPagesController#about.*/*                                                                                              ┃    6 ┃  1.84s ┃  307ms ┃   68ms ┃  196ms ┃  379ms ┃ 194ms-383ms
+StaticPagesController#faq.*/*                                                                                                ┃    2 ┃  577ms ┃  288ms ┃    9ms ┃  282ms ┃  295ms ┃ 277ms-296ms
+Maps::TracksController#info.JS                                                                                               ┃   37 ┃  9.92s ┃  267ms ┃  135ms ┃   42ms ┃  612ms ┃  55ms-612ms
+StaticPagesController#about.HTML                                                                                             ┃    1 ┃  264ms ┃  264ms ┃    0ms ┃  264ms ┃  264ms ┃ 260ms-269ms
+Api::V1::GeodataController#recive.JSON                                                                                       ┃  959 ┃  3m42s ┃  231ms ┃  269ms ┃  111ms ┃  5.80s ┃ 132ms-564ms
+SessionsController#create.HTML                                                                                               ┃    2 ┃  453ms ┃  226ms ┃   79ms ┃  171ms ┃  283ms ┃ 168ms-287ms
+SessionsController#new.HTML                                                                                                  ┃    1 ┃  224ms ┃  224ms ┃    0ms ┃  224ms ┃  224ms ┃ 221ms-229ms
+Admin::ExceptionsController#show.HTML                                                                                        ┃    1 ┃  216ms ┃  216ms ┃    0ms ┃  216ms ┃  216ms ┃ 214ms-221ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Partials rendering time - by sum                                                                                             ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+static_pages/_home4guest.html.erb                                                                                            ┃  680 ┃ 30.60s ┃   45ms ┃   71ms ┃    0ms ┃  541ms ┃   0ms-311ms
+shared/maps/_root_map.html.erb                                                                                               ┃  300 ┃ 14.69s ┃   48ms ┃  138ms ┃    0ms ┃  1.50s ┃   0ms-383ms
+users/_cars.html.erb                                                                                                         ┃  180 ┃ 12.91s ┃   71ms ┃  102ms ┃    0ms ┃  517ms ┃   0ms-389ms
+static_pages/about.html.erb                                                                                                  ┃  112 ┃  5.22s ┃   46ms ┃   53ms ┃    0ms ┃  212ms ┃   0ms-191ms
+shared/_question.html.erb                                                                                                    ┃   52 ┃  1.16s ┃   22ms ┃   31ms ┃    0ms ┃  102ms ┃    0ms-91ms
+maps/tracks/_info_chart.html.erb                                                                                             ┃  105 ┃  1.07s ┃   10ms ┃    9ms ┃    0ms ┃   39ms ┃    0ms-37ms
+simple_captcha/_simple_captcha.erb                                                                                           ┃   20 ┃  654ms ┃   32ms ┃   42ms ┃    0ms ┃  119ms ┃   0ms-120ms
+users/_reset_password_email_form.html.erb                                                                                    ┃   17 ┃  287ms ┃   16ms ┃   17ms ┃    0ms ┃   44ms ┃    0ms-44ms
+admin/dashboard/_stat_of_urequests.html.erb                                                                                  ┃    8 ┃   31ms ┃    3ms ┃    1ms ┃    1ms ┃    5ms ┃     1ms-5ms
+maps/tracks/_info_all.html.erb                                                                                               ┃    2 ┃   19ms ┃    9ms ┃    3ms ┃    6ms ┃   12ms ┃    6ms-12ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Partials rendering time - by mean                                                                                            ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+users/_cars.html.erb                                                                                                         ┃  180 ┃ 12.91s ┃   71ms ┃  102ms ┃    0ms ┃  517ms ┃   0ms-389ms
+shared/maps/_root_map.html.erb                                                                                               ┃  300 ┃ 14.69s ┃   48ms ┃  138ms ┃    0ms ┃  1.50s ┃   0ms-383ms
+static_pages/about.html.erb                                                                                                  ┃  112 ┃  5.22s ┃   46ms ┃   53ms ┃    0ms ┃  212ms ┃   0ms-191ms
+static_pages/_home4guest.html.erb                                                                                            ┃  680 ┃ 30.60s ┃   45ms ┃   71ms ┃    0ms ┃  541ms ┃   0ms-311ms
+simple_captcha/_simple_captcha.erb                                                                                           ┃   20 ┃  654ms ┃   32ms ┃   42ms ┃    0ms ┃  119ms ┃   0ms-120ms
+shared/_question.html.erb                                                                                                    ┃   52 ┃  1.16s ┃   22ms ┃   31ms ┃    0ms ┃  102ms ┃    0ms-91ms
+users/_reset_password_email_form.html.erb                                                                                    ┃   17 ┃  287ms ┃   16ms ┃   17ms ┃    0ms ┃   44ms ┃    0ms-44ms
+maps/tracks/_info_chart.html.erb                                                                                             ┃  105 ┃  1.07s ┃   10ms ┃    9ms ┃    0ms ┃   39ms ┃    0ms-37ms
+maps/tracks/_info_all.html.erb                                                                                               ┃    2 ┃   19ms ┃    9ms ┃    3ms ┃    6ms ┃   12ms ┃    6ms-12ms
+admin/dashboard/_stat_of_urequests.html.erb                                                                                  ┃    8 ┃   31ms ┃    3ms ┃    1ms ┃    1ms ┃    5ms ┃     1ms-5ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+View rendering time - by sum                                                                                                 ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Maps::TracksController#index.JSON                                                                                            ┃   22 ┃ 17.52s ┃  796ms ┃  373ms ┃  270ms ┃  1.73s ┃ 269ms-1.75s
+StaticPagesController#home.HTML                                                                                              ┃   41 ┃ 10.66s ┃  260ms ┃  313ms ┃   51ms ┃  1.86s ┃  51ms-1.86s
+StaticPagesController#home.*/*                                                                                               ┃   21 ┃  6.05s ┃  288ms ┃  206ms ┃   86ms ┃  782ms ┃  85ms-792ms
+UsersController#show.HTML                                                                                                    ┃   15 ┃  5.96s ┃  397ms ┃  217ms ┃  106ms ┃  820ms ┃ 105ms-831ms
+Maps::LocationsController#index.JSON                                                                                         ┃   22 ┃  4.75s ┃  215ms ┃  263ms ┃   16ms ┃  1.03s ┃  16ms-1.04s
+Maps::TracksController#info.JS                                                                                               ┃   37 ┃  2.40s ┃   64ms ┃   98ms ┃    4ms ┃  405ms ┃   4ms-409ms
+Api::V1::GeodataController#recive.JSON                                                                                       ┃  959 ┃  2.35s ┃    2ms ┃   35ms ┃    0ms ┃  1.10s ┃     0ms-5ms
+Admin::DashboardController#index.HTML                                                                                        ┃    2 ┃  2.30s ┃  1.15s ┃  554ms ┃  757ms ┃  1.54s ┃ 755ms-1.56s
+StaticPagesController#about.*/*                                                                                              ┃    6 ┃  1.44s ┃  240ms ┃   52ms ┃  150ms ┃  283ms ┃ 148ms-287ms
+#.                                                                                                                           ┃   16 ┃  1.05s ┃   65ms ┃  165ms ┃    1ms ┃  646ms ┃   1ms-653ms
+Api::V1::SessionsController#ping.JSON                                                                                        ┃  277 ┃  1.02s ┃    3ms ┃    3ms ┃    0ms ┃   27ms ┃    0ms-14ms
+Maps::CarsController#index.JSON                                                                                              ┃   22 ┃  712ms ┃   32ms ┃   48ms ┃    4ms ┃  209ms ┃   4ms-211ms
+UsersController#charts_controller.JSON                                                                                       ┃   54 ┃  548ms ┃   10ms ┃    8ms ┃    0ms ┃   41ms ┃    0ms-30ms
+StaticPagesController#faq.*/*                                                                                                ┃    2 ┃  438ms ┃  219ms ┃   14ms ┃  209ms ┃  229ms ┃ 207ms-232ms
+Admin::ExceptionsController#index.HTML                                                                                       ┃    1 ┃  392ms ┃  392ms ┃    0ms ┃  392ms ┃  392ms ┃ 389ms-402ms
+Admin::UsersController#show.HTML                                                                                             ┃    1 ┃  319ms ┃  319ms ┃    0ms ┃  319ms ┃  319ms ┃ 316ms-326ms
+Admin::TicketsController#index.HTML                                                                                          ┃    1 ┃  239ms ┃  239ms ┃    0ms ┃  239ms ┃  239ms ┃ 236ms-244ms
+StaticPagesController#about.HTML                                                                                             ┃    1 ┃  223ms ┃  223ms ┃    0ms ┃  223ms ┃  223ms ┃ 221ms-229ms
+Admin::ExceptionsController#show.HTML                                                                                        ┃    1 ┃  177ms ┃  177ms ┃    0ms ┃  177ms ┃  177ms ┃ 177ms-182ms
+SessionsController#new.HTML                                                                                                  ┃    1 ┃  176ms ┃  176ms ┃    0ms ┃  176ms ┃  176ms ┃ 174ms-179ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+View rendering time - by mean                                                                                                ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Admin::DashboardController#index.HTML                                                                                        ┃    2 ┃  2.30s ┃  1.15s ┃  554ms ┃  757ms ┃  1.54s ┃ 755ms-1.56s
+Maps::TracksController#index.JSON                                                                                            ┃   22 ┃ 17.52s ┃  796ms ┃  373ms ┃  270ms ┃  1.73s ┃ 269ms-1.75s
+UsersController#show.HTML                                                                                                    ┃   15 ┃  5.96s ┃  397ms ┃  217ms ┃  106ms ┃  820ms ┃ 105ms-831ms
+Admin::ExceptionsController#index.HTML                                                                                       ┃    1 ┃  392ms ┃  392ms ┃    0ms ┃  392ms ┃  392ms ┃ 389ms-402ms
+Admin::UsersController#show.HTML                                                                                             ┃    1 ┃  319ms ┃  319ms ┃    0ms ┃  319ms ┃  319ms ┃ 316ms-326ms
+StaticPagesController#home.*/*                                                                                               ┃   21 ┃  6.05s ┃  288ms ┃  206ms ┃   86ms ┃  782ms ┃  85ms-792ms
+StaticPagesController#home.HTML                                                                                              ┃   41 ┃ 10.66s ┃  260ms ┃  313ms ┃   51ms ┃  1.86s ┃  51ms-1.86s
+StaticPagesController#about.*/*                                                                                              ┃    6 ┃  1.44s ┃  240ms ┃   52ms ┃  150ms ┃  283ms ┃ 148ms-287ms
+Admin::TicketsController#index.HTML                                                                                          ┃    1 ┃  239ms ┃  239ms ┃    0ms ┃  239ms ┃  239ms ┃ 236ms-244ms
+StaticPagesController#about.HTML                                                                                             ┃    1 ┃  223ms ┃  223ms ┃    0ms ┃  223ms ┃  223ms ┃ 221ms-229ms
+StaticPagesController#faq.*/*                                                                                                ┃    2 ┃  438ms ┃  219ms ┃   14ms ┃  209ms ┃  229ms ┃ 207ms-232ms
+Maps::LocationsController#index.JSON                                                                                         ┃   22 ┃  4.75s ┃  215ms ┃  263ms ┃   16ms ┃  1.03s ┃  16ms-1.04s
+Admin::ExceptionsController#show.HTML                                                                                        ┃    1 ┃  177ms ┃  177ms ┃    0ms ┃  177ms ┃  177ms ┃ 177ms-182ms
+SessionsController#new.HTML                                                                                                  ┃    1 ┃  176ms ┃  176ms ┃    0ms ┃  176ms ┃  176ms ┃ 174ms-179ms
+UsersController#reset_password.*/*                                                                                           ┃    1 ┃   88ms ┃   88ms ┃    0ms ┃   88ms ┃   88ms ┃   88ms-91ms
+#.                                                                                                                           ┃   16 ┃  1.05s ┃   65ms ┃  165ms ┃    1ms ┃  646ms ┃   1ms-653ms
+Maps::TracksController#info.JS                                                                                               ┃   37 ┃  2.40s ┃   64ms ┃   98ms ┃    4ms ┃  405ms ┃   4ms-409ms
+Maps::CarsController#index.JSON                                                                                              ┃   22 ┃  712ms ┃   32ms ┃   48ms ┃    4ms ┃  209ms ┃   4ms-211ms
+Maps::TracksController#info_all.JS                                                                                           ┃    1 ┃   19ms ┃   19ms ┃    0ms ┃   19ms ┃   19ms ┃   19ms-20ms
+UsersController#charts_controller.JSON                                                                                       ┃   54 ┃  548ms ┃   10ms ┃    8ms ┃    0ms ┃   41ms ┃    0ms-30ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Database time - by sum                                                                                                       ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+UsersController#charts_controller.JSON                                                                                       ┃   54 ┃ 34.55s ┃  639ms ┃  926ms ┃   20ms ┃  4.01s ┃  28ms-3.44s
+Api::V1::GeodataController#recive.JSON                                                                                       ┃  959 ┃ 18.49s ┃   19ms ┃   13ms ┃    5ms ┃  270ms ┃    8ms-48ms
+CarsController#info.JSON                                                                                                     ┃   11 ┃  9.23s ┃  838ms ┃  814ms ┃   39ms ┃  1.99s ┃  38ms-2.02s
+UsersController#show.HTML                                                                                                    ┃   15 ┃  5.36s ┃  357ms ┃  154ms ┃  125ms ┃  765ms ┃ 124ms-767ms
+StaticPagesController#home.HTML                                                                                              ┃   41 ┃  1.34s ┃   32ms ┃   30ms ┃    9ms ┃  161ms ┃   9ms-163ms
+#.                                                                                                                           ┃   16 ┃  1.29s ┃   80ms ┃  154ms ┃    0ms ┃  609ms ┃   0ms-612ms
+Maps::TracksController#info.JS                                                                                               ┃   37 ┃  1.11s ┃   30ms ┃   16ms ┃    5ms ┃   87ms ┃    6ms-88ms
+StaticPagesController#home.*/*                                                                                               ┃   21 ┃  731ms ┃   34ms ┃   26ms ┃   12ms ┃  142ms ┃  12ms-143ms
+Maps::LocationsController#index.JSON                                                                                         ┃   22 ┃  478ms ┃   21ms ┃   23ms ┃    3ms ┃   98ms ┃    3ms-99ms
+Maps::TracksController#index.JSON                                                                                            ┃   22 ┃  411ms ┃   18ms ┃   37ms ┃    3ms ┃  183ms ┃   3ms-185ms
+Admin::DashboardController#index.HTML                                                                                        ┃    2 ┃  264ms ┃  132ms ┃   26ms ┃  113ms ┃  150ms ┃ 112ms-153ms
+StaticPagesController#about.*/*                                                                                              ┃    6 ┃  191ms ┃   31ms ┃   17ms ┃   14ms ┃   63ms ┃   14ms-64ms
+Maps::CarsController#index.JSON                                                                                              ┃   22 ┃   96ms ┃    4ms ┃    5ms ┃    1ms ┃   29ms ┃    0ms-29ms
+Api::V1::SessionsController#ping.JSON                                                                                        ┃  277 ┃   60ms ┃    0ms ┃    2ms ┃    0ms ┃   23ms ┃     0ms-0ms
+Maps::LocationsController#show.JSON                                                                                          ┃   10 ┃   58ms ┃    5ms ┃    3ms ┃    1ms ┃   13ms ┃    1ms-13ms
+Admin::TicketsController#index.HTML                                                                                          ┃    1 ┃   55ms ┃   55ms ┃    0ms ┃   55ms ┃   55ms ┃   55ms-57ms
+StaticPagesController#faq.*/*                                                                                                ┃    2 ┃   51ms ┃   25ms ┃    1ms ┃   24ms ┃   26ms ┃   24ms-26ms
+Maps::TracksController#info_all.JS                                                                                           ┃    1 ┃   45ms ┃   45ms ┃    0ms ┃   45ms ┃   45ms ┃   45ms-47ms
+Admin::UsersController#show.HTML                                                                                             ┃    1 ┃   28ms ┃   28ms ┃    0ms ┃   28ms ┃   28ms ┃   27ms-28ms
+StaticPagesController#about.HTML                                                                                             ┃    1 ┃   23ms ┃   23ms ┃    0ms ┃   23ms ┃   23ms ┃   23ms-24ms
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Database time - by mean                                                                                                      ┃ Hits ┃    Sum ┃   Mean ┃ StdDev ┃    Min ┃    Max ┃    95 %tile
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CarsController#info.JSON                                                                                                     ┃   11 ┃  9.23s ┃  838ms ┃  814ms ┃   39ms ┃  1.99s ┃  38ms-2.02s
+UsersController#charts_controller.JSON                                                                                       ┃   54 ┃ 34.55s ┃  639ms ┃  926ms ┃   20ms ┃  4.01s ┃  28ms-3.44s
+UsersController#show.HTML                                                                                                    ┃   15 ┃  5.36s ┃  357ms ┃  154ms ┃  125ms ┃  765ms ┃ 124ms-767ms
+Admin::DashboardController#index.HTML                                                                                        ┃    2 ┃  264ms ┃  132ms ┃   26ms ┃  113ms ┃  150ms ┃ 112ms-153ms
+#.                                                                                                                           ┃   16 ┃  1.29s ┃   80ms ┃  154ms ┃    0ms ┃  609ms ┃   0ms-612ms
+Admin::TicketsController#index.HTML                                                                                          ┃    1 ┃   55ms ┃   55ms ┃    0ms ┃   55ms ┃   55ms ┃   55ms-57ms
+Maps::TracksController#info_all.JS                                                                                           ┃    1 ┃   45ms ┃   45ms ┃    0ms ┃   45ms ┃   45ms ┃   45ms-47ms
+StaticPagesController#home.*/*                                                                                               ┃   21 ┃  731ms ┃   34ms ┃   26ms ┃   12ms ┃  142ms ┃  12ms-143ms
+StaticPagesController#home.HTML                                                                                              ┃   41 ┃  1.34s ┃   32ms ┃   30ms ┃    9ms ┃  161ms ┃   9ms-163ms
+StaticPagesController#about.*/*                                                                                              ┃    6 ┃  191ms ┃   31ms ┃   17ms ┃   14ms ┃   63ms ┃   14ms-64ms
+Maps::TracksController#info.JS                                                                                               ┃   37 ┃  1.11s ┃   30ms ┃   16ms ┃    5ms ┃   87ms ┃    6ms-88ms
+Admin::UsersController#show.HTML                                                                                             ┃    1 ┃   28ms ┃   28ms ┃    0ms ┃   28ms ┃   28ms ┃   27ms-28ms
+StaticPagesController#faq.*/*                                                                                                ┃    2 ┃   51ms ┃   25ms ┃    1ms ┃   24ms ┃   26ms ┃   24ms-26ms
+StaticPagesController#about.HTML                                                                                             ┃    1 ┃   23ms ┃   23ms ┃    0ms ┃   23ms ┃   23ms ┃   23ms-24ms
+Maps::LocationsController#index.JSON                                                                                         ┃   22 ┃  478ms ┃   21ms ┃   23ms ┃    3ms ┃   98ms ┃    3ms-99ms
+Admin::ExceptionsController#show.HTML                                                                                        ┃    1 ┃   20ms ┃   20ms ┃    0ms ┃   20ms ┃   20ms ┃   20ms-20ms
+Api::V1::GeodataController#recive.JSON                                                                                       ┃  959 ┃ 18.49s ┃   19ms ┃   13ms ┃    5ms ┃  270ms ┃    8ms-48ms
+Maps::TracksController#index.JSON                                                                                            ┃   22 ┃  411ms ┃   18ms ┃   37ms ┃    3ms ┃  183ms ┃   3ms-185ms
+UsersController#reset_password.*/*                                                                                           ┃    1 ┃   18ms ┃   18ms ┃    0ms ┃   18ms ┃   18ms ┃   17ms-18ms
+SessionsController#new.HTML                                                                                                  ┃    1 ┃   17ms ┃   17ms ┃    0ms ┃   17ms ┃   17ms ┃   17ms-18ms
+
+Process blockers (> 1 sec duration)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+UsersController#charts_controller.JSON ┃ 25 hits ┃ 41.0% ┃ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+UsersController#show.HTML              ┃ 10 hits ┃ 16.4% ┃ ░░░░░░░░░░░░░░░░░░░░░
+Api::V1::GeodataController#recive.JSON ┃  9 hits ┃ 14.8% ┃ ░░░░░░░░░░░░░░░░░░░
+CarsController#info.JSON               ┃  6 hits ┃  9.8% ┃ ░░░░░░░░░░░░░
+Maps::TracksController#index.JSON      ┃  5 hits ┃  8.2% ┃ ░░░░░░░░░░░
+StaticPagesController#home.HTML        ┃  2 hits ┃  3.3% ┃ ░░░░
+Maps::LocationsController#index.JSON   ┃  2 hits ┃  3.3% ┃ ░░░░
+#.                                     ┃  1 hits ┃  1.6% ┃ ░░
+Admin::DashboardController#index.HTML  ┃  1 hits ┃  1.6% ┃ ░░
